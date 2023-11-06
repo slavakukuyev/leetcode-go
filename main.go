@@ -7,5 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println(romantoint.RomanToInt("MCMXCIV")) //1994
+	fmt.Println(romantoint.RomanToInt("MCMXCIV"))  //1994
+	fmt.Println(romantoint.RomanToInt2("MCMXCIV")) //1994
 }

@@ -66,3 +66,30 @@ func RomanToInt(s string) int {
 
 	return number
 }
+
+func RomanToInt2(s string) int {
+	if !isValidRoman(s) {
+		return 0
+	}
+
+	hm := map[byte]int{
+		'I': 1,
+		'V': 5,
+		'X': 10,
+		'L': 50,
+		'C': 100,
+		'D': 500,
+		'M': 1000,
+	}
+	cur, total, v := 0, 0, 0
+	for i := len(s) - 1; i >= 0; i-- {
+		v = hm[s[i]]
+		if cur > v {
+			total -= v
+		} else {
+			total += v
+			cur = v
+		}
+	}
+	return total
+}
