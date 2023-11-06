@@ -32,8 +32,8 @@ func isValidRoman(s string) bool {
 	return !invalidRegex.MatchString(s)
 }
 
-func RomanToInt(s string) int {
-	if !isValidRoman(s) {
+func RomanToInt(s string, validationRequired bool) int {
+	if validationRequired && !isValidRoman(s) {
 		return 0
 	}
 
@@ -67,8 +67,8 @@ func RomanToInt(s string) int {
 	return number
 }
 
-func RomanToInt2(s string) int {
-	if !isValidRoman(s) {
+func RomanToInt2(s string, validationRequired bool) int {
+	if validationRequired && !isValidRoman(s) {
 		return 0
 	}
 
