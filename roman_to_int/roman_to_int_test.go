@@ -124,3 +124,41 @@ func TestRomanToIntWithValidRomanNumeral12(t *testing.T) {
 		t.Errorf("Expected 3999, but got %d", result)
 	}
 }
+
+func TestValidRomanLength1(t *testing.T) {
+	result := isValidRoman("I")
+	if result != true {
+		t.Errorf("Expected true, but got false")
+	}
+}
+
+// Returns true for valid roman numerals with length > 1.
+func TestValidRomanLengthGreaterThan1(t *testing.T) {
+	result := isValidRoman("IV")
+	if result != true {
+		t.Errorf("Expected true, but got false")
+	}
+}
+
+// Returns true for valid roman numerals with all valid characters.
+func TestValidRomanAllValidCharacters(t *testing.T) {
+	result := isValidRoman("XVIII")
+	if result != true {
+		t.Errorf("Expected true, but got false")
+	}
+}
+
+// Returns false for roman numerals with length > 15.
+func TestInvalidRomanLengthGreaterThan15(t *testing.T) {
+	result := isValidRoman("MMMMMMMMMMMMMMM")
+	if result != false {
+		t.Errorf("Expected false, but got true")
+	}
+}
+
+func TestInvalidRomanInvalidCharacters(t *testing.T) {
+	result := isValidRoman("IXL")
+	if result != false {
+		t.Errorf("Expected false, but got true")
+	}
+}

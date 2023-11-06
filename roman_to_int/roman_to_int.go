@@ -1,6 +1,6 @@
 package romantoint
 
-import "strings"
+import "regexp"
 
 var roman_map = map[byte]int{
 	'I': 1,
@@ -13,31 +13,23 @@ var roman_map = map[byte]int{
 }
 
 func isValidRoman(s string) bool {
-	if len(s) < 1 || len(s) > 15 {
+	l := len(s)
+	if l < 1 || l > 15 {
 		return false
 	}
 
-	for i := 0; i < len(s); i++ {
+	for i := 0; i < l; i++ {
 		if _, ok := roman_map[s[i]]; !ok {
 			return false
 		}
 	}
 
-	if len(s) == 1 {
+	if l == 1 {
 		return true
 	}
 
-	if strings.Contains(s, "IIII") ||
-		strings.Contains(s, "XXXX") ||
-		strings.Contains(s, "CCCC") ||
-		strings.Contains(s, "MMMM") ||
-		strings.Contains(s, "VV") ||
-		strings.Contains(s, "LL") ||
-		strings.Contains(s, "DD") {
-		return false
-	}
-
-	return true
+	invalidRegex := regexp.MustCompile(`IIII|XXXX|CCCC|MMMM|VV|LL|DD|IL|IC|ID|IXL|IM|XD|XM|LC|LD|LM|DM`)
+	return !invalidRegex.MatchString(s)
 }
 
 func RomanToInt(s string) int {
