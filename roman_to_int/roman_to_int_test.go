@@ -1,6 +1,5 @@
 package romantoint
 
-// The function returns 4 when passed "IV".
 import "testing"
 
 func TestRomanToIntWithIV(t *testing.T) {
@@ -39,8 +38,6 @@ func TestRomanToIntWithInvalidRomanNumeral(t *testing.T) {
 	}
 }
 
-//create a few test functions to validate the RomanToInt function
-// Path: roman_to_int/roman_to_int.go
 func TestRomanToIntWithValidRomanNumeral(t *testing.T) {
 	result := RomanToInt("III")
 	if result != 3 {
