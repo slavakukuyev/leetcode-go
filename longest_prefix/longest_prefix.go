@@ -19,7 +19,7 @@ func LongestCommonPrefix(strs []string) string {
 	for i := 1; i < len(strs); i++ {
 		prefix.Reset()
 		for j := 0; j < len(latest); j++ {
-			if j < len(latest) && j < len(strs[i]) && latest[j] == strs[i][j] {
+			if j < len(strs[i]) && latest[j] == strs[i][j] {
 				prefix.WriteByte(strs[i][j])
 			} else {
 				break
