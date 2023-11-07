@@ -1,4 +1,4 @@
-# is palindrom number
+# is palindrome number
 
 ## Description
 Given an integer x, return true if x is a palindrome, and false otherwise.
@@ -33,9 +33,9 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ```
 
 ## Flows:
-### IsPalindromNumber
+### IsPalindromeNumber
 ```
-Checks if the number is negative, the number is not palindrom.
+Checks if the number is negative, the number is not palindrome.
 Check if x between 0 and 9. If true, return true as single digit numbers are palindromes.
 Convert x int to a string using strconv.Itoa(x).
 Initialize left as 0 and right as the length of the string minus 1.
@@ -45,7 +45,7 @@ Increment left and decrement right.
 If the loop completes without returning false, return true as the number is a palindrome.
 ```
 
-### IsPalindromNumberCopilot
+### IsPalindromeNumberCopilot
 ```
 Check if x is less than 0. If true, return false.
 Initialize reverse as 0 and origin as x.
@@ -59,27 +59,27 @@ Check if origin is equal to reverse. If true, return true. Otherwise, return fal
 ```
 goos: windows
 goarch: amd64
-pkg: github.com/slavakukuyev/leetcode-go/is_palindrom_number
+pkg: github.com/slavakukuyev/leetcode-go/is_palindrome_number
 cpu: 12th Gen Intel(R) Core(TM) i7-1255U
 
-=== RUN   BenchmarkIsPalindromNumber
-BenchmarkIsPalindromNumber
-BenchmarkIsPalindromNumber-12
+=== RUN   BenchmarkIsPalindromeNumber
+BenchmarkIsPalindromeNumber
+BenchmarkIsPalindromeNumber-12
 31410980                43.68 ns/op           24 B/op          1 allocs/op
 PASS
 ok      github.com/slavakukuyev/leetcode-go/is_palindrom_number 15.215s
 
 
 === RUN   BenchmarkIsPalindromCopilot
-BenchmarkIsPalindromCopilot
-BenchmarkIsPalindromCopilot-12
+BenchmarkIsPalindromeCopilot
+BenchmarkIsPalindromeCopilot-12
 84893246                14.68 ns/op            0 B/op          0 allocs/op
 PASS
-ok      github.com/slavakukuyev/leetcode-go/is_palindrom_number 1.304s
+ok      github.com/slavakukuyev/leetcode-go/is_palindrome_number 1.304s
 ```
 
 ## LeetCode results:
-### IsPalindromNumber
+### IsPalindromeNumber
 * Runtime Details
 	- 8ms
 	- Beats **77.17%** of users with Go
@@ -89,7 +89,7 @@ ok      github.com/slavakukuyev/leetcode-go/is_palindrom_number 1.304s
 	- Beats **51.72%** of users with Go
 
 
-### IsPalindromNumberCopilot
+### IsPalindromeNumberCopilot
 * Runtime Details
 	- 29ms
 	- Beats **5.18%** of users with Go
@@ -102,7 +102,7 @@ ok      github.com/slavakukuyev/leetcode-go/is_palindrom_number 1.304s
 
 
 
-### IsPalindromNumberCopilot
+### IsPalindromeNumberCopilot
 ```
 before loop reverse 0
 before the loop x 12345678987654321

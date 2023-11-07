@@ -1,4 +1,4 @@
-package ispalindromnumber
+package ispalindromenumber
 
 import "strconv"
 
@@ -25,7 +25,7 @@ func IsPalindromeNumber(x int) bool {
 	return true
 }
 
-func IsPalindromNumberCopilot(x int) bool {
+func IsPalindromeNumberCopilot(x int) bool {
 	if x < 0 {
 		return false
 	}

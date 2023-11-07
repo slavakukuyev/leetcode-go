@@ -1,20 +1,20 @@
-package ispalindromnumber
+package ispalindromenumber
 
 import "testing"
 
-func BenchmarkIsPalindromNumber(b *testing.B) {
+func BenchmarkIsPalindromeNumber(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		IsPalindromeNumber(12345678987654321)
 	}
 }
 
-func BenchmarkIsPalindromCopilot(b *testing.B) {
+func BenchmarkIsPalindromeCopilot(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		IsPalindromNumberCopilot(12345678987654321)
+		IsPalindromeNumberCopilot(12345678987654321)
 	}
 }
 
-func TestIsPalindromNumber(t *testing.T) {
+func TestIsPalindromeNumber(t *testing.T) {
 
 	tests := []struct {
 		name string
@@ -36,13 +36,13 @@ func TestIsPalindromNumber(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := IsPalindromeNumber(tt.x); got != tt.want {
-				t.Errorf("IsPalindromNumber(%d) = %v, want %v", tt.x, got, tt.want)
+				t.Errorf("IsPalindromeNumber(%d) = %v, want %v", tt.x, got, tt.want)
 			}
 		})
 	}
 }
 
-func TestIsPalindromNumberCopilot(t *testing.T) {
+func TestIsPalindromeNumberCopilot(t *testing.T) {
 
 	tests := []struct {
 		name string
@@ -62,8 +62,8 @@ func TestIsPalindromNumberCopilot(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := IsPalindromNumberCopilot(tt.x); got != tt.want {
-				t.Errorf("IsPalindromNumberCopilot(%d) = %v, want %v", tt.x, got, tt.want)
+			if got := IsPalindromeNumberCopilot(tt.x); got != tt.want {
+				t.Errorf("IsPalindromeNumberCopilot(%d) = %v, want %v", tt.x, got, tt.want)
 			}
 		})
 	}
