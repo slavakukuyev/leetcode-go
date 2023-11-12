@@ -6,6 +6,7 @@ import (
 	ispalindromenumber "github.com/slavakukuyev/leetcode-go/is_palindrome_number"
 	longestprefix "github.com/slavakukuyev/leetcode-go/longest_prefix"
 	romantoint "github.com/slavakukuyev/leetcode-go/roman_to_int"
+	zigzagstring "github.com/slavakukuyev/leetcode-go/zigzagstring"
 )
 
 func main() {
@@ -19,4 +20,6 @@ func main() {
 	fmt.Println(ispalindromenumber.IsPalindromeNumber(12345678987654321))        //true
 	fmt.Println(ispalindromenumber.IsPalindromeNumberCopilot(12345678987654321)) //true
 
+	fmt.Println(zigzagstring.Convert("PAYPALISHIRING", 3)) //PAHNAPLSIIGYIR
+	fmt.Println(zigzagstring.Convert("PAYPALISHIRING", 4)) //PINALSIGYAHRPI
 }
