@@ -6,7 +6,7 @@
 - [is palindrome number](is_palindrome_number/is_palindrome_number.md)
 - [zigzag string](zigzag_string/zigzagstring.md)
 - [valid parentheses](valid_parentheses/validparentheses.md)
-
+- [remove duplicates](remove_duplicates/remove_duplicates.md)
 
 ### os & hardware
 ```text
