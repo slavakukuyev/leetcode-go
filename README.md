@@ -7,6 +7,7 @@
 - [zigzag string](zigzag_string/zigzagstring.md)
 - [valid parentheses](valid_parentheses/validparentheses.md)
 - [remove duplicates](remove_duplicates/remove_duplicates.md)
+- [max area](max_area/max_area.md)
 
 ### os & hardware
 ```text
